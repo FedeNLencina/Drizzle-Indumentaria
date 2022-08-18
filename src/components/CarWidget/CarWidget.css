@@ -1,0 +1,17 @@
+.carWidgetContainer {
+  width: 10%;
+}
+
+.carWidgetButtom {
+  height: 100%;
+  width: 100%;
+}
+
+.icon{
+    font-size: 25px; 
+}
+.carWidget {
+  color: black;
+  font-size: 15px;
+  font-family: "EB Garamond", serif;
+}
