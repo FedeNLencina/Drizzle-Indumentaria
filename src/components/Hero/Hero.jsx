@@ -8,15 +8,18 @@ export function Hero() {
   return (
     <>
       <div className="hero">
-        <Container>
-          <Row>
+        <Container className="heroContainer">
+          <Row className="row">
             <Col className="text-center">
+              <h1 className="textHero">
+                Drizzle indumentaria.
+              </h1>
               <h2 className="textHero">
-                El secreto de un gran estilo, es sentirte bien con lo que vistes
+                El secreto de un gran estilo, es sentirte bien con lo que vistes!
               </h2>
             </Col>
-            <Col className="justify-content-center">
-              <HeroCarousel/>
+            <Col>
+              <HeroCarousel />
             </Col>
           </Row>
         </Container>

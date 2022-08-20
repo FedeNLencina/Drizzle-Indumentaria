@@ -1,10 +1,18 @@
 /*font-family: 'Tiro Telugu', serif;*/
 .hero{
+    padding:3% ;
     width: 100%;
     background-color:rgb(241, 224, 216);
-    height:100vh;
+  
+}
+.heroContainer{
+    height:80%;
+}
+.row{
+     height:100%;
 }
 
 .textHero{
+    padding:10% 3%;
     font-family: 'Tiro Telugu', serif;
 }
