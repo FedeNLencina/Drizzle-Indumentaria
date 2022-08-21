@@ -1,5 +1,6 @@
 .carouselContainer {
   height: 100%;
+  padding-top: 1%;
 }
 
 .carousel {
@@ -13,8 +14,10 @@
 }
 
 .carouselImg {
-  margin-left: 10%;
-  height: 600px;
+  height: 100%;
+}
+.carousel-inner {
+  height: 100%;
 }
 
 .carousel-indicators {
