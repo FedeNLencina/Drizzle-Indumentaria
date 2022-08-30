@@ -13,12 +13,12 @@ export const vestidosList = [
     id: 2,
     title: "Vestido Azul",
     price: "1250 ARGS",
-    picture: vestido2,
+    picture:  vestido2,
   },
   {
     id: 3,
     title: "Vestido Marron",
     price: "1400 ARGS",
     picture: vestido3,
-  }
+  },
 ];

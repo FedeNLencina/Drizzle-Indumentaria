@@ -5,7 +5,7 @@ import "./Item.css";
 
 export function Item({item}) {
     return (
-      <Container>
+      <Container key={item.id}>
         <Card className = "card">
           <Card.Img variant="top" src={item.picture} />
           <Card.Body>

@@ -8,8 +8,6 @@ export function ItemListContainer(props) {
         console.log("agregado, ", counter);
     }
 
-    
-
     return (
         <Container className="text-center itemList">
             <ItemList/>
