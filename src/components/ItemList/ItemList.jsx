@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { vestidosList } from "../../data/vestidos";
 import Container from "react-bootstrap/esm/Container";
-import Carousel from "react-bootstrap/Carousel";
 import { Item } from "../../components/ItemCard/Item";
 
 export function ItemList() {
@@ -11,7 +10,7 @@ export function ItemList() {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(vestidosList);
-      }, 4000);
+      }, 2000);
     });
   };
 
@@ -26,7 +25,7 @@ export function ItemList() {
     };
     renderVestidos();
   }, []);
-  console.log("vestidos: ", vestidos);
+  // console.log("vestidos: ", vestidos);
 
   return (
     <Container className="d-flex justify-content-center">
