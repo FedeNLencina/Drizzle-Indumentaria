@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import "./ItemCount.css";
 
-export function ItemCount({ stock, initial, agregarProducto }) {
+export function ItemCount({ stock, initial, onAdd }) {
   const [counter, setCounter] = useState(initial);
 
   const increase = () => {
@@ -34,7 +34,7 @@ export function ItemCount({ stock, initial, agregarProducto }) {
           </Button>
         </div>
         <div className="d-flex justify-content-center">
-          <Button variant="outline-primary" onClick={()=>agregarProducto(counter)}>
+          <Button variant="outline-primary" onClick={()=>onAdd(counter)}>
             Agregar al carrito
           </Button>
         </div>

@@ -3,10 +3,15 @@ import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/esm/Container";
+import { ItemCount } from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
 
 
-export function ItemDetail({clothe}) {
+export function ItemDetail({ clothe }) {
+  
+  const onAdd = (counter) => {
+    console.log("Amount", counter);
+   }
     return (
       <Container key={clothe.id}>
         {clothe && (
@@ -23,6 +28,9 @@ export function ItemDetail({clothe}) {
                   <Card.Text className="text-center">{clothe.price}</Card.Text>
                   <div className="d-flex justify-content-center buttomPurchaseContainer">
                     <Button variant="primary">Purchase</Button>
+                  </div>
+                  <div className="d-flex justify-content-center">
+                    <ItemCount initial={0} stock={10} onAdd={onAdd} />
                   </div>
                 </Card.Body>
               </Col>
