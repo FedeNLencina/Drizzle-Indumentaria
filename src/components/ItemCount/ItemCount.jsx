@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import "./ItemCount.css";
@@ -34,9 +35,11 @@ export function ItemCount({ stock, initial, onAdd }) {
           </Button>
         </div>
         <div className="d-flex justify-content-center">
-          <Button variant="outline-primary" onClick={()=>onAdd(counter)}>
-            Agregar al carrito
-          </Button>
+          <Link to="/cart">
+            <Button variant="outline-primary" onClick={() => onAdd(counter)}>
+              Agregar al carrito
+            </Button>
+          </Link>
         </div>
       </div>
     </Container>
