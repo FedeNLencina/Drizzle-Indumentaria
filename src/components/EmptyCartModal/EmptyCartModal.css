@@ -1,0 +1,8 @@
+.container{
+    width:100%;
+}
+.emptyProductModal{
+    padding:10%;
+    border: 1px solid black;
+    border-radius:1%;
+}

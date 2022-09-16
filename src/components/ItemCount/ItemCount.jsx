@@ -18,7 +18,7 @@ export function ItemCount({ stock, initial, onAdd }) {
       setCounter(counter - 1);
     }
   };
-  
+
   return (
     <Container className="d-flex justify-content-center">
       <div className="itemCount d-flex flex-column justify-content-center">
@@ -35,11 +35,9 @@ export function ItemCount({ stock, initial, onAdd }) {
           </Button>
         </div>
         <div className="d-flex justify-content-center">
-          <Link to="/cart">
-            <Button variant="outline-primary" onClick={() => onAdd(counter)}>
-              Agregar al carrito
-            </Button>
-          </Link>
+          <Button variant="outline-primary" onClick={() => onAdd(counter)}>
+            Agregar al carrito
+          </Button>
         </div>
       </div>
     </Container>

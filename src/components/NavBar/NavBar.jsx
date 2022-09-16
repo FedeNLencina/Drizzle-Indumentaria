@@ -34,7 +34,7 @@ export function NavBar() {
               Contact
             </Link>
             <div className="widgetDiv d-flex justify-content-sm-start justify-content-lg-end">
-              <CarWidget number="4" />
+              <CarWidget/>
             </div>
           </Nav>
         </Navbar.Collapse>

@@ -1,27 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
+import { CartItem } from "../CartItem/CartItem";
+import { EmptyCartModal } from "../EmptyCartModal/EmptyCartModal"
+import { Link } from 'react-router-dom';
+import Container from "react-bootstrap/esm/Container";
 
 export const CartContainer = () => {
-  const { productCartList, deleteProduct, clearProductList,isInCart } = useContext(CartContext);
+  const { productCartList, clearProductList,isInCart } = useContext(CartContext);
   console.log("productCartList", productCartList);
+ 
 
   return (
-    <div>
-      <p>CartContainer</p>
-      {productCartList.map((item) => (
-        <div>
-          <p>{item.title}</p>
-          <p>{item.price}</p>
-          <p>{item.quantity}</p>
-          <button onClick={() => deleteProduct(item.id)}>
-            Eliminar producto
-          </button>
+    <Container>
+      {productCartList.length > 0 ? (
+        productCartList.map((item) => (
+          <div>
+            <CartItem key={item.id} item={item} />
 
-          <button onClick={() => clearProductList()}>Vaciar carrito</button>
-          <button onClick={() => isInCart(item.id)}>esta agregado?</button>
+            <button onClick={() => clearProductList()}>Vaciar carrito</button>
+            <button onClick={() => isInCart(item.id)}>esta agregado?</button>
+          </div>
+        ))
+      ) : (<>
+        <div>
+            <EmptyCartModal />
         </div>
-      ))}
-    </div>
+         <div className="d-flex justify-content-around">
+          <Link to="/itemList/vestido" className="navLink">
+              Vestidos
+            </Link>
+            <Link to="/itemList/sweater" className="navLink">
+              Sweaters
+            </Link>
+        </div>
+        </>
+      )}
+    </Container>
   );
 };
