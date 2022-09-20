@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { clothes } from "../../data/dataBase";
+import React from "react";
 import Container from "react-bootstrap/esm/Container";
 import { Item } from "../../components/ItemCard/Item";
 
