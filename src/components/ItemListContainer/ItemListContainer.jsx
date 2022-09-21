@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import "./ItemListContainer.css";
 import { ItemList } from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../../utils/firebase";
 
 export function ItemListContainer(props) {
@@ -35,8 +35,11 @@ export function ItemListContainer(props) {
     const getData = async () => {
       try {
         // creo una consulta o referencia a dataBase
-        const query = collection(db, "items");
-        const response = await getDocs(query);
+        const queryRef = query(
+          collection(db, "items"),
+          where("categoria", "==", categoria)
+        );
+        const response = await getDocs(queryRef);
         // console.log(response);
         const docs = response.docs;
         // console.log(docs)

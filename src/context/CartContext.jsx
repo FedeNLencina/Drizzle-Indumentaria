@@ -54,7 +54,7 @@ export function CartProvider({ children }) {
   
     const getTotalProducts = () => {
       const totalProducts = productCartList.reduce(
-        (acc, item) => acc + item.quantity,
+        (accumulador, item) => accumulador + item.quantity,
         0
       );
       return totalProducts;
@@ -62,7 +62,7 @@ export function CartProvider({ children }) {
 
     const getTotalPrice = () => {
       const totalPriceProducts = productCartList.reduce(
-        (acc, item) => acc + item.totalPrice,
+        (accumulador, item) => accumulador + item.totalPrice,
         0
       );
       return totalPriceProducts;
