@@ -28,7 +28,7 @@ export function ItemDetail({ clothe }) {
                 <Card.Img variant="top" src={clothe.picture} />
               </Col>
               <Col className="d-flex justify-content-center align-items-center colBody">
-                <Card.Body className="d-flex flex-column justify-content-center body">
+                <Card.Body className="d-flex flex-column justify-content-center bodyCard">
                   <Card.Title className="text-center">
                     {clothe.title}
                   </Card.Title>

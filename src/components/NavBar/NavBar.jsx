@@ -24,6 +24,9 @@ export function NavBar() {
             <Link to="/" className="navLink">
               Home
             </Link>
+            <Link to="/itemList/catalogo" className="navLink">
+              Catalogo
+            </Link>
             <Link to="/itemList/vestido" className="navLink">
               Vestidos
             </Link>
@@ -34,7 +37,7 @@ export function NavBar() {
               Contact
             </Link>
             <div className="widgetDiv d-flex justify-content-sm-start justify-content-lg-end">
-              <CarWidget/>
+              <CarWidget />
             </div>
           </Nav>
         </Navbar.Collapse>

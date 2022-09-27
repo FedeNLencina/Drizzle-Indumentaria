@@ -35,10 +35,16 @@ export function ItemListContainer(props) {
     const getData = async () => {
       try {
         // creo una consulta o referencia a dataBase
-        const queryRef = query(
-          collection(db, "items"),
-          where("categoria", "==", categoria)
-        );
+         const queryRef = categoria ==="catalogo"
+           ? collection(db, "items")
+           : query(
+               collection(db, "items"),
+               where("categoria", "==", categoria)
+             );
+        // const queryRef = query(
+        //   collection(db, "items"),
+        //   where("categoria", "==", categoria)
+        // );
         const response = await getDocs(queryRef);
         // console.log(response);
         const docs = response.docs;
@@ -50,13 +56,22 @@ export function ItemListContainer(props) {
           };
           return newDoc;
         });
-        const nuevaLista = data.filter((item) => item.categoria === categoria);
-        setRopa(nuevaLista);
+        if (categoria === "catalogo") {
+          const nuevaLista = data.filter(
+            (item) => item);
+          setRopa(nuevaLista);
+        } else {
+           const nuevaLista = data.filter(
+             (item) => item.categoria === categoria
+           );
+           setRopa(nuevaLista);
+        }
+       
         console.log("data", data);
       } catch (error) {
         console.log(error);
       }
-      // /setArreegloProductos(data);
+   
     };
     getData();
   }, [categoria]);
@@ -64,7 +79,6 @@ export function ItemListContainer(props) {
   return (
     <Container className="text-center itemList">
       <ItemList clothes={ropa} />
-      {/* <ItemCount stock={10} initial={1} agregarProducto={agregar}/> */}
     </Container>
   );
 }
