@@ -3,7 +3,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import "./Navbar.css";
 import { CarWidget } from "../CarWidget/CarWidget";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 export function NavBar() {
   return (
