@@ -12,11 +12,51 @@ a carrousel and its link to navigate through the page. It its compoound the foll
 + Sweaters
 + Vestidos
 + Contact
++ Cart
 
 #### Simulation gif
-In this video. it is showed the process of purchase a product (showing a succesfull alert) and one showing an error on shopping (showing an error alert)
+In this video. it is showed the process of purchasing a product (showing a succesfull alert), 
+and one showing an error on shopping (showing an error alert when a person fills the form with a wrong data)
 
 ![Ecommerce-gif.gif](https://github.com/FedeNLencina/DrizzleIndumentaria-Lencina/blob/main/src/gif/Ecommerce-gif.gif)
+
+Each product has its price and when you someone select one of them, it can selects the amount it wants to buy (up to ten each product),
+and then, a buttom which leads to the cart appears.
+Inside the cart it appears all the products that the person added or want to buy. Also it can remove but one product, some products, or all of them.
+If a person doesn't have any products, there is a modal telling it that it has not any product and there appears the links referring to the type of diffrent products.
+
+#### Dependencies. 
+
+For the development of this proyect, some libraries were used. Here are them:
+
+##### Seet Alert
+This library was used for the modals when someone buys a product or when it failed to purchase. 
+For installing it, must run this command:
+> npm install sweetalert --save
+
+And then import it inside the proyect:
+> import swal from 'sweetalert':
+
+###### Framer motion
+This library was used in the hero, addindg a effect when someone gets in the landing page.
+For installing it, must run this command:
+> npm install framer-motion
+
+And then import it inside the proyect:
+> import { motion } from "framer-motion":
+
+###### React-Bootstrap
+This library was used to import some default components for the page.
+For installing it, must run this command:
+> npm install react-bootstrap bootstrap
+
+To see the imports of the different components, you can check the React Bootstrap page: 
+> https://react-bootstrap.netlify.app/
+
+All of these dependencies can be install just running 
+### `npm install`
+
+And know, right below there is some default explanation just for running the proyect.
 
 # Getting Started with Create React App
 
@@ -34,57 +74,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+> Try running this application and have fun!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#  *Contributors*
 
-### `npm run build`
+Federico Lencina (Maintainer). 
+ > https://github.com/FedeNLencina
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
