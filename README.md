@@ -1,3 +1,23 @@
+#  *Welcome to Drizzle Indumentaria* 
+
+## Developer: Federico Lencina
+
+### Proyect: React E-commerce
+
+This proyect simulates a shop E-commerce. It's a single page application made with React. It has a landing page with
+a carrousel and its link to navigate through the page. It its compoound the following links for navigating:
+
++ Home
++ Catalogo
++ Sweaters
++ Vestidos
++ Contact
+
+#### Simulation gif
+In this video. it is showed the process of purchase a product (showing a succesfull alert) and one showing an error on shopping (showing an error alert)
+
+![Ecommerce-gif.gif](https://github.com/FedeNLencina/DrizzleIndumentaria-Lencina/blob/main/src/gif/Ecommerce-gif.gif)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
