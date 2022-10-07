@@ -10,33 +10,90 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import swal from "sweetalert";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../utils/firebase";
 import "./CartContainer.css";
 
 export const CartContainer = () => {
-  const { productCartList, clearProductList, isInCart, getTotalPrice } =
+  const { productCartList, clearProductList, getTotalPrice } =
     useContext(CartContext);
-  console.log("productCartList", productCartList);
   const [idOrder, setIdOrder] = useState("");
+
+  //Regex
+  const nameRegex = /^[A-Z][a-z\sA-Za-z]{1,30}$/;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+  const cellphoneRegex = /^[0-9]{10}$/;
+
   const date = new Date();
 
+  const validateName = (name) => {
+    if (nameRegex.test(name)) {
+      return true;
+    }
+    return false;
+  };
+
+  const validateEmail = (email) => {
+    if (emailRegex.test(email)) {
+      return true;
+    }
+    return false;
+  };
+
+  const validateNumber = (number) => {
+    if (cellphoneRegex.test(number)) {
+      return true;
+    }
+    return false;
+  };
+
   const sendOrder = (e) => {
+    const name = e.target[0].value;
+    const lastname = e.target[1].value;
+    const email = e.target[2].value;
+    const number = e.target[3].value;
+
     e.preventDefault();
-    const order = {
-      buyer: {
-        name: e.target[0].value,
-        phone: e.target[1].value,
-        email: e.target[2].value,
-      },
-      items: productCartList,
-      total: getTotalPrice(),
-    };
-    //crear referencia en la base de datos de donde voy a guardar el documento
-    const queryRef = collection(db, "orders");
-    //agregamos el documento
-    addDoc(queryRef, order).then((respuesta) => setIdOrder(respuesta.id));
-    console.log(order);
+
+    if (
+      validateName(name) &&
+      validateName(lastname) &&
+      validateEmail(email) &&
+      validateNumber(number)
+    ) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const order = {
+        buyer: {
+          name: name,
+          lastname: lastname,
+          email: email,
+          phone: number,
+        },
+        items: productCartList,
+        total: getTotalPrice(),
+      };
+      //crear referencia en la base de datos de donde voy a guardar el documento
+      const queryRef = collection(db, "orders");
+      //agregamos el documento
+      addDoc(queryRef, order).then((respuesta) => setIdOrder(respuesta.id));
+      console.log(order);
+      swal({
+        title: "Finalizado",
+        text: "La compra ha sido exitosa",
+        icon: "success",
+        button: "Finalizar",
+      });
+    } else {
+      swal({
+        title: "Error!",
+        text: "Ha ocurrido un error al ingresar los datos en el formulario. Por favor corrobore que los datos sean correctos.",
+        icon: "error",
+        button: "Try again",
+      });
+    }
     e.preventDefault();
   };
 
