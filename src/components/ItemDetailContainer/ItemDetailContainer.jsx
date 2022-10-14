@@ -10,16 +10,6 @@ export function ItemDetailContainer() {
   console.log("product id: ", id);
   const [ropa, setRopa] = useState(0);
 
-  // const getRopa = (id) => {
-  //    return new Promise((resolve, reject) => {
-  //      const product = clothes.find((item) => item.id === parseInt(id));
-  //       setTimeout(() => {
-  //         resolve(product);
-  //       }, 2000);
-
-  //    });
-  // };
-
   useEffect(() => {
     const getClothe = async () => {
       try {
