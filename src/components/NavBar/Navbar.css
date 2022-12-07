@@ -33,11 +33,14 @@
 .navLinksContainer{
     width: 100%;
 }
+
 .navBarLinks{
     width: 100%;
 }
+
+
 .logoContainer{
-    width: 30%;
+    width: 45%;
 }
 .logoLink{
     width:100%;
@@ -50,6 +53,25 @@
 }
 
 .widgetDiv{
-    width: 40%;
+    width: 10%;
     margin: 0 30px;
+}
+
+
+@media (max-width:600px) {
+    .logo{
+        width: 40%;
+    }
+    .logoContainer{
+        width: 100%;
+    }
+    .nav{
+        padding:0;
+    }
+
+    .navBarLinks{
+        display:flex;
+        justify-content:center;
+
+    }
 }
