@@ -64,6 +64,8 @@
     }
     .logoContainer{
         width: 100%;
+        display: flex;
+        justify-content: flex-end;
     }
     .nav{
         padding:0;
@@ -73,5 +75,26 @@
         display:flex;
         justify-content:center;
 
+    }
+
+    .divLinks{
+        margin-top:1rem;
+    }
+
+    .collapsed{
+        padding: 2px;
+        margin: 5px 2px;
+    }
+
+    .navbar-toggler{
+         padding: 2px;
+        margin: 2px 2px;
+    }
+    .navbar-toggler-icon{
+        margin: 2px 2px;
+    }
+
+    .widgetDiv{
+        width:100%;
     }
 }

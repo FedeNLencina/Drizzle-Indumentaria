@@ -18,34 +18,37 @@ export function NavBar() {
             />{" "}
           </Link>
         </div>
-        {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
-        {/* <Navbar.Collapse id="basic-navbar-nav navLinksContainer"> */}
-        <Nav className="me-auto d-flex navBarLinks justify-content-around">
-          <div className="divLinks d-flex justify-content-around">
-            <Link to="/" className="navLink">
-              Home
-            </Link>
-            <Link to="/itemList/catalogo" className="navLink">
+        <Navbar.Toggle
+          aria-controls="basic-navbar-nav"
+          className="colapsedButton"
+        />
+        <Navbar.Collapse id="basic-navbar-nav navLinksContainer">
+          <Nav className="me-auto d-flex navBarLinks justify-content-around">
+            <Nav.Link>
+              <Link to="/" className="navLink text-center">
+                Home
+              </Link>
+            </Nav.Link>
+            <Link to="/itemList/catalogo" className="navLink text-center">
               Catalogo
             </Link>
-            <Link to="/itemList/vestido" className="navLink">
+            <Link to="/itemList/vestido" className="navLink text-center">
               Vestidos
             </Link>
-            <Link to="/itemList/sweater" className="navLink">
+            <Link to="/itemList/sweater" className="navLink text-center">
               Sweaters
             </Link>
-            <Link to="/itemList/remera" className="navLink">
+            <Link to="/itemList/remera" className="navLink text-center">
               Remeras
             </Link>
-            <Link to="#link" className="navLink">
+            <Link to="#link" className="navLink text-center">
               Contact
             </Link>
-          </div>
-          <div className="widgetDiv d-flex justify-content-sm-start justify-content-lg-end">
-            <CarWidget />
-          </div>
-        </Nav>
-        {/* </Navbar.Collapse> */}
+            <div className="widgetDiv d-flex justify-content-sm-center justify-content-lg-end">
+              <CarWidget />
+            </div>
+          </Nav>
+        </Navbar.Collapse>
       </Container>
     </Navbar>
   );
