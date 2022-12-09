@@ -4,25 +4,22 @@ import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import "./CarWidget.css";
 
-
 export function CarWidget() {
-  const { getTotalProducts, productCartList } = useContext(CartContext);
+  const { getTotalProducts } = useContext(CartContext);
 
   return (
     <div className="carWidgetContainer">
-      {productCartList.length > 0 && (
-        <>
-          <Link to="/cart">
-            <Button
-              variant="light"
-              className="carWidgetButtom d-flex justify-content-around"
-            >
-              <i class="fa-solid fa-cart-shopping icon"></i>
-              {getTotalProducts()}
-            </Button>
-          </Link>
-        </>
-      )}
+      <>
+        <Link to="/cart">
+          <Button
+            variant="light"
+            className="carWidgetButtom d-flex justify-content-around"
+          >
+            <i class="fa-solid fa-cart-shopping icon"></i>
+            {getTotalProducts()}
+          </Button>
+        </Link>
+      </>
     </div>
   );
 }

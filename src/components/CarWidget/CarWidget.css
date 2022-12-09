@@ -15,3 +15,10 @@
   font-size: 15px;
   font-family: "EB Garamond", serif;
 }
+
+
+@media (max-width:600px) {
+  /* .carWidgetContainer{
+      display: none;
+    } */
+}
