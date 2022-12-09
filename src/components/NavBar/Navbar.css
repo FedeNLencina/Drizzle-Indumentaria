@@ -3,6 +3,9 @@
 .nav{
     width:100%;
 }
+.navbar{
+    padding: 0;
+}
 
 .navBar{
     padding-top: 0;
@@ -30,17 +33,62 @@
     background-size: 0 0.1em, 100% 0.1em;
   }
 
+  .navLinkHome{
+     height: 100%;
+    text-decoration: none;
+    color: rgb(136, 136, 136);
+     font-size: 20px;
+    font-family: 'EB Garamond', serif;
+    background: 
+      linear-gradient(to right, transparent,transparent),
+      linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 0));
+    background-size: 100% 0.1em, 0 0.1em;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+  }
+
+  .navLinkHome:hover,
+     .navLinkHome:focus {
+    text-decoration: none;
+    color: black;
+   
+  }
+
+   .navLinkHomeA{
+     height: 100%;
+    text-decoration: none;
+    color: rgb(136, 136, 136);
+     font-size: 20px;
+    font-family: 'EB Garamond', serif;
+    background: 
+      linear-gradient(to right, transparent,transparent),
+      linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 0));
+    background-size: 100% 0.1em, 0 0.1em;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+  }
+
+  .navLinkHomeA:hover,
+     .navLinkHomeA:focus {
+    text-decoration: none;
+    color: black;
+    background-size: 0 0.1em, 100% 0.1em;
+  }
+
 .navLinksContainer{
     width: 100%;
 }
 
 .navBarLinks{
     width: 100%;
+    padding-left: 203px;
 }
 
 
 .logoContainer{
-    width: 45%;
+    width: 30%;
 }
 .logoLink{
     width:100%;
@@ -70,6 +118,52 @@
 
 @media (max-width:600px) {
     .logo{
+        width: 40%;
+    }
+    .logoContainer{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .nav{
+        padding:0;
+    }
+
+    .navBarLinks{
+        display:flex;
+        justify-content:center;
+        padding: 0 5px;
+
+    }
+
+    .divLinks{
+        margin-top:1rem;
+    }
+
+    .collapsed{
+        padding: 2px;
+        margin: 5px 2px;
+    }
+
+    .navbar-toggler{
+         padding: 2px;
+        margin: 2px 2px;
+    }
+    .navbar-toggler-icon{
+        margin: 2px 2px;
+    }
+
+    .navWidget{
+      display: none;
+    }
+    .navWidgetResponsive{
+      display: inline;
+      width: 10%;
+    }
+}
+
+@media (min-width:600px) and (max-width:1000px) {
+     .logo{
         width: 40%;
     }
     .logoContainer{
