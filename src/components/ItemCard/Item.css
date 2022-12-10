@@ -1,0 +1,8 @@
+@media (max-width:600px) {
+    .itemTitle{
+        font-size: 12px;
+    }
+     .itemPrice{
+        font-size: 12px;
+    }
+}

@@ -22,19 +22,31 @@ export function ItemCount({ stock, initial, onAdd }) {
     <Container className="d-flex justify-content-center">
       <div className="itemCount d-flex flex-column justify-content-center">
         <div className="d-flex justify-content-around">
-          <Button variant="outline-primary" onClick={dicrease}>
+          <Button
+            className="buttonCount"
+            variant="outline-primary"
+            onClick={dicrease}
+          >
             -
           </Button>
           <div className="d-flex flex-column justify-content-center">
             <div>{counter}</div>
           </div>
 
-          <Button variant="outline-primary" onClick={increase}>
+          <Button
+            className="buttonCount"
+            variant="outline-primary"
+            onClick={increase}
+          >
             +
           </Button>
         </div>
         <div className="d-flex justify-content-center">
-          <Button variant="outline-primary" onClick={() => onAdd(counter)}>
+          <Button
+            className="buttonCountAdd"
+            variant="outline-primary"
+            onClick={() => onAdd(counter)}
+          >
             Agregar al carrito
           </Button>
         </div>

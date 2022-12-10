@@ -1,7 +1,39 @@
 .itemCount{
-    border: 1px black solid;
+    border:2px #dc353542 solid;
     border-radius: 3%;
     padding: 2%;
     margin: 2%;
     width: 50%;
+}
+
+.buttonCount{
+    border:2px #dc353542 solid;
+    font-size:20px;
+    color:black;
+}
+
+.buttonCountAdd{
+    border:2px #dc353542 solid;
+    color:black;
+}
+
+@media (max-width:600px) {
+    itemCount{
+    border:2px #dc353542 solid;
+    border-radius: 3%;
+    padding: 2%;
+    margin: 2%;
+    width: 50%;
+}
+
+.buttonCount{
+    border:2px #dc353542 solid;
+    font-size:20px;
+    color:black;
+}
+
+.buttonCountAdd{
+    border:2px #dc353542 solid;
+    color:black;
+}
 }

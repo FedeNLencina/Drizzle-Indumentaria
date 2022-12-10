@@ -10,8 +10,8 @@ export function Item({item}) {
         <Card className="card">
           <Card.Img variant="top" src={item.picture} />
           <Card.Body>
-            <Card.Title>{item.title}</Card.Title>
-            <Card.Text>{item.price}</Card.Text>
+            <Card.Title className="itemTitle">{item.title}</Card.Title>
+            <Card.Text className="itemPrice">{item.price} ARS</Card.Text>
             <Link to={`/item/${item.id}`}>
               <Button variant="primary">Ver</Button>
             </Link>

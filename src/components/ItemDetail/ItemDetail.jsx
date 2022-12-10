@@ -24,30 +24,35 @@ export function ItemDetail({ clothe }) {
         {clothe && (
           <Card className="card">
             <Row className="d-flex justify-content-center">
-              <Col className="d-flex justify-content-center">
+              <Col
+                xs={"12"}
+                lg={"6"}
+                className="d-flex justify-content-center colImage"
+              >
                 <Card.Img variant="top" src={clothe.picture} />
               </Col>
-              <Col className="d-flex justify-content-center align-items-center colBody">
+              <Col
+                xs={"12"}
+                lg={"6"}
+                className="d-flex justify-content-center align-items-center colBody"
+              >
                 <Card.Body className="d-flex flex-column justify-content-center bodyCard">
                   <Card.Title className="text-center">
                     {clothe.title}
                   </Card.Title>
                   <Card.Text className="text-center">{clothe.price}</Card.Text>
-                  <div className="d-flex justify-content-center">
+                  <div className="d-flex justify-content-center itemCountDiv">
                     <ItemCount initial={0} stock={10} onAdd={onAdd} />
                   </div>
-                  {quantity > 0 ? 
+                  {quantity > 0 ? (
                     <div className="d-flex justify-content-center">
                       <Link to="/cart">
-                        <Button
-                          variant="outline-primary"
-                        >
-                          Ir al carrito
-                        </Button>
+                        <Button variant="outline-primary">Ir al carrito</Button>
                       </Link>
                     </div>
-                    : <></>
-                  }
+                  ) : (
+                    <></>
+                  )}
                 </Card.Body>
               </Col>
             </Row>

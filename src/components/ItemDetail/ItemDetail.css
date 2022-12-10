@@ -8,3 +8,29 @@
 .buttomPurchaseContainer{
     width:100%
 }
+
+
+@media (max-width:600px) {
+    .colImage{
+        padding: 10px 0;
+        width: 90%;
+        margin: 5px 0;
+    }
+    .colBody{
+        padding: 10px 0;
+        width: 90%;
+    }
+
+    .card{
+        margin: 20px 0;
+    }
+
+    .itemCount{
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .itemCountDiv{
+        margin: 10px 0;
+    }
+}
