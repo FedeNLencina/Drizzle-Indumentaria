@@ -9,6 +9,10 @@
     width:100%
 }
 
+.buttonCart{
+    border:2px #dc353542 solid;
+    color:black;
+}
 
 @media (max-width:600px) {
     .colImage{
@@ -23,6 +27,7 @@
 
     .card{
         margin: 20px 0;
+        padding: 10px 0;
     }
 
     .itemCount{
@@ -33,4 +38,7 @@
     .itemCountDiv{
         margin: 10px 0;
     }
+    .bodyCard{
+     width: 100%        
+}
 }

@@ -1,0 +1,23 @@
+.card{
+    padding: 10px;
+}
+
+.submitButton{
+    margin: 10px 0;
+}
+
+.cardText{
+    font-size: 15px;
+}
+
+.formCard{
+    padding: 10px;
+    
+}
+
+.formContainer{
+    padding: 20px;
+    border: 1px rgb(179, 179, 179) solid;
+    border-radius:10px;
+    margin-bottom: 15px;
+}

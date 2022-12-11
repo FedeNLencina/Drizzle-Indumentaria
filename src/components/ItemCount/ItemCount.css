@@ -18,7 +18,7 @@
 }
 
 @media (max-width:600px) {
-    itemCount{
+    .itemCount{
     border:2px #dc353542 solid;
     border-radius: 3%;
     padding: 2%;

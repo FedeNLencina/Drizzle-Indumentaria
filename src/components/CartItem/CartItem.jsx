@@ -14,35 +14,48 @@ export const CartItem = ({ item }) => {
     <Container key={item.id} className="cartItemContainer">
       <Card className="card">
         <Row className="d-flex justify-content-around">
-          <Col>
-            <Card.Img
-              className="cardImg"
-              variant="top"
-              src={item.picture}
-              alt={item.title}
-            />
-          </Col>
-          <Col className="d-flex align-content-center colBody">
-            <Card.Body className="d-flex flex-column justify-content-center body">
-              <Card.Title className="text-center">{item.title}</Card.Title>
-              <Card.Text className="text-center">
-                Precio: {item.price}
-              </Card.Text>
-              <Card.Text className="text-center">
-                Cantidad: {item.quantity}
-              </Card.Text>
-              <Card.Text className="text-center">
-                Precio total: {item.totalPrice}
-              </Card.Text>
-              <div className="d-flex justify-content-center">
-                <Button
-                  variant="primary"
-                  onClick={() => removeProduct(item.id)}
-                >
-                  Eliminar producto
-                </Button>
-              </div>
-            </Card.Body>
+          <Col className="d-flex justify-content-around">
+            <Col
+              xs={"12"}
+              lg={"6"}
+              className="d-flex justify-content-center colImg"
+            >
+              <Card.Img
+                className="cardImg"
+                variant="top"
+                src={item.picture}
+                alt={item.title}
+              />
+            </Col>
+            <Col
+              xs={"12"}
+              lg={"6"}
+              className="d-flex align-content-center colDescription"
+            >
+              <Card.Body className="d-flex flex-column justify-content-center body">
+                <Card.Title className="text-center title">
+                  {item.title}
+                </Card.Title>
+                <Card.Text className="text-center price">
+                  Precio: {item.price}
+                </Card.Text>
+                <Card.Text className="text-center quantity">
+                  Cantidad: {item.quantity}
+                </Card.Text>
+                <Card.Text className="text-center totalAmount">
+                  Precio total: {item.totalPrice}
+                </Card.Text>
+                <div className="d-flex justify-content-center">
+                  <Button
+                    className="buttonDelete"
+                    variant="outline-primary"
+                    onClick={() => removeProduct(item.id)}
+                  >
+                    Eliminar producto
+                  </Button>
+                </div>
+              </Card.Body>
+            </Col>
           </Col>
         </Row>
       </Card>

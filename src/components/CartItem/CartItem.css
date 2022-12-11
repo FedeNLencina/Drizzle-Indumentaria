@@ -1,13 +1,58 @@
-.cartItemContainer {
-  height: 100%;
+.container {
+  width:70%;
 }
 
-.colBody{
+.cartItemContainer {
+  height: 100%;
+  width:70%;
+}
+
+.colDescription{
     background-color:rgb(241, 224, 216);
+    width:50%;
 }
 
 
 .cardImg {
   height: 100%;
   width: 100%;
+}
+
+.buttonDelete{
+  border:2px #dc353542 solid;
+  color:black;
+}
+
+
+@media (max-width: 600px){
+  .cardImg{
+    width:90%
+  }
+
+  .colDescription{
+    width: 43%;
+    margin-right: auto;
+  }
+
+  .colImg{
+    width:55%;
+  }
+
+  .title{
+  font-size:13px;
+}
+
+.price{
+  font-size:13px;
+}
+
+.quantity{
+  font-size:13px;
+}
+
+.totalAmount{
+  font-size:13px;
+}
+
+
 }

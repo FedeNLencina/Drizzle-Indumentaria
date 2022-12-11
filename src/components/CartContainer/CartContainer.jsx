@@ -98,28 +98,32 @@ export const CartContainer = () => {
   };
 
   return (
-    <Container>
-      {productCartList.length > 0 ? (
-        productCartList.map((item) => (
-          <div className="divRender d-flex justify-content-center">
-            <CartItem key={item.id} item={item} />{" "}
-          </div>
-        ))
-      ) : (
-        <>
-          <div>
-            <EmptyCartModal />
-          </div>
-          <div className="d-flex justify-content-around">
-            <Link to="/itemList/vestido" className="navLink">
-              Vestidos
-            </Link>
-            <Link to="/itemList/sweater" className="navLink">
-              Sweaters
-            </Link>
-          </div>
-        </>
-      )}
+    <Container className="cartContainer">
+      <Row>
+        {productCartList.length > 0 ? (
+          productCartList.map((item) => (
+            <Col xs={"12"} lg={"6"}>
+              <div className="divRender d-flex justify-content-center">
+                <CartItem key={item.id} item={item} />{" "}
+              </div>
+            </Col>
+          ))
+        ) : (
+          <>
+            <div>
+              <EmptyCartModal />
+            </div>
+            <div className="d-flex justify-content-around">
+              <Link to="/itemList/vestido" className="navLink">
+                Vestidos
+              </Link>
+              <Link to="/itemList/sweater" className="navLink">
+                Sweaters
+              </Link>
+            </div>
+          </>
+        )}
+      </Row>
       {productCartList.length > 0 ? (
         <>
           <Row>
@@ -127,16 +131,24 @@ export const CartContainer = () => {
               <Card className="cardRender">
                 <Card.Body className="bodyRender">
                   <div className="d-flex justify-content-center">
-                    <Card.Title>Precio total:</Card.Title>
-                    <Card.Text> {getTotalPrice()}</Card.Text>
+                    <Card.Title className="totalPrice">
+                      Precio total:{" "}
+                    </Card.Title>
+                    <Card.Text className="totalPriceValue">
+                      {" "}
+                      {getTotalPrice()} ARS
+                    </Card.Text>
                   </div>
                   <div className="d-flex justify-content-center">
-                    <Card.Title>Fecha:</Card.Title>
-                    <Card.Text>{date.toLocaleDateString()}</Card.Text>
+                    <Card.Title className="date">Fecha: </Card.Title>
+                    <Card.Text className="dateValue">
+                      {date.toLocaleDateString()}
+                    </Card.Text>
                   </div>
                   <div className="d-flex justify-content-center">
                     <Button
-                      variant="primary"
+                      className="buttonDeleteAll"
+                      variant="outline-primary"
                       onClick={() => clearProductList()}
                     >
                       Vaciar carrito

@@ -47,7 +47,12 @@ export function ItemDetail({ clothe }) {
                   {quantity > 0 ? (
                     <div className="d-flex justify-content-center">
                       <Link to="/cart">
-                        <Button variant="outline-primary">Ir al carrito</Button>
+                        <Button
+                          className="buttonCart"
+                          variant="outline-primary"
+                        >
+                          Ir al carrito
+                        </Button>
                       </Link>
                     </div>
                   ) : (

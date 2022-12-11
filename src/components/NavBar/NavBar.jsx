@@ -63,7 +63,7 @@ export function NavBar() {
                 </Link>
               </Nav.Link>
               <Nav.Link href="#">
-                <Link to="#link" className="navLink text-center">
+                <Link to="/contact" className="navLink text-center">
                   Contact
                 </Link>
               </Nav.Link>

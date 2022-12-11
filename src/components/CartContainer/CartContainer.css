@@ -2,6 +2,7 @@
  margin: 2% 0;;
 }
 .bodyRender {
+  background-color:rgb(241, 224, 216);
   width: 100%;
 }
 
@@ -11,5 +12,32 @@
 }
 
 .cardRender{ 
-    width: 50%;
+   
+    width: 40%;
+}
+
+.buttonDeleteAll{
+  border:1px black solid;
+  color:black;
+}
+
+
+@media (max-width:600px) {
+  .cardRender{ 
+    width: 95%;
+}
+
+.buttonDelete{
+  font-size:11px;
+}
+
+.totalPrice{ 
+    font-size:17px;
+    margin-right: 5px;
+}
+.date{
+  font-size:17px;
+  margin-right: 5px;
+}
+
 }
